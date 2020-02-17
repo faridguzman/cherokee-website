@@ -58,14 +58,17 @@ svg {
 svg .cls-1 {
     fill: aliceblue;
     stroke-dashoffset: 1000;
+    animation-name: slideInUp;
 }
 
 svg .cls-2 {
     fill: aliceblue;
     stroke-dashoffset: 1000;
+    animation-name: slideInUp;
 }
 
 svg .cls-3 {
     fill: aliceblue;
     stroke-dashoffset: 1000;
+    animation-name: slideInUp;
 }
