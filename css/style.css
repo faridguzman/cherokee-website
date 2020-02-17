@@ -45,20 +45,12 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 }
 
-#tsalagi-text {
+svg {
+    top: 0;
+    bottom: 0;
+    margin: auto;
     position: absolute;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    top: 200px;
-}
-
-.tsalagi {
-    margin: 0;
-    padding: 0;
     width: 440px;
     height: 440px;
-    position: absolute;
-    left: 90px;
-    top: 230px;
+    left: 15%;
 }
