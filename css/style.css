@@ -39,14 +39,26 @@ body {
 
 .header {
     height: 100vh;
-    background-image: linear-gradient( to bottom, rgba(71, 122, 184, 0.678), rgba(0, 0, 0, 0.924)), url(../img/zach-lezniewicz-Pfi_zhLmBr0-unsplash.jpg);
+    background-image: linear-gradient(to bottom, rgba(71, 122, 184, 0.678), rgba(0, 0, 0, 0.924)), url(../img/zach-lezniewicz-Pfi_zhLmBr0-unsplash.jpg);
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 }
 
+#tsalagi-text {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    top: 200px;
+}
+
 .tsalagi {
+    margin: 0;
+    padding: 0;
     width: 440px;
     height: 440px;
     position: absolute;
+    left: 90px;
+    top: 230px;
 }
