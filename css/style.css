@@ -46,6 +46,7 @@ body {
 }
 
 .tsalagi {
-    width: 100px;
-    height: 100px;
+    width: 440px;
+    height: 440px;
+    position: absolute;
 }
