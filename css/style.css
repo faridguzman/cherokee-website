@@ -37,7 +37,6 @@ body {
     color: rgb(255, 255, 255);
 }
 
-
 .nav {
     width: 100%;
     height: 65px;
@@ -50,24 +49,31 @@ body {
     float: left;
     width: auto;
     height: auto;
+    text-decoration: none;
+    text-decoration-style: none;
     padding-left: 3rem;
+    animation-name: slideInUp;
+    animation-duration: 5s;
+    /* Safari 4.0 - 8.0 */
+    animation-delay: 0s;
+    /* Safari 4.0 - 8.0 */
+    animation-iteration-count: initial;
 }
 
+
+}
 .nav div.logo a {
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem;
 }
-
 .nav div.logo a:hover {
     color: #00E676;
 }
-
 .nav div.main_list {
     height: 65px;
     float: right;
 }
-
 .nav div.main_list ul {
     width: 100%;
     height: 65px;
@@ -76,40 +82,33 @@ body {
     margin: 0;
     padding: 0;
 }
-
 .nav div.main_list ul li {
     width: auto;
     height: 65px;
     padding: 0;
     padding-right: 3rem;
 }
-
 .nav div.main_list ul li a {
     text-decoration: none;
     color: #fff;
     line-height: 65px;
     font-size: 1.4rem;
 }
-
 .nav div.main_list ul li a:hover {
     color: #00E676;
 }
 
-
 /* Home section */
-
 .home {
     width: 100%;
     height: 100vh;
     background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
     background-position: center top;
-	background-size:cover;
+    background-size: cover;
 }
-
 .navTrigger {
     display: none;
 }
-
 .nav {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -117,31 +116,32 @@ body {
     transition: all 0.4s ease;
 }
 
-
 /* Media qurey section */
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
         margin: 0;
     }
 }
-
 @media screen and (max-width:768px) {
     .navTrigger {
         display: block;
     }
+    
     .nav div.logo {
         margin-left: 15px;
     }
+    
     .nav div.main_list {
         width: 100%;
         height: 0;
         overflow: hidden;
     }
+    
     .nav div.show_list {
         height: auto;
         display: none;
     }
+    
     .nav div.main_list ul {
         flex-direction: column;
         width: 100%;
@@ -153,25 +153,27 @@ body {
         /*same background color of navbar*/
         background-position: center top;
     }
+    
     .nav div.main_list ul li {
         width: 100%;
         text-align: right;
     }
+    
     .nav div.main_list ul li a {
         text-align: center;
         width: 100%;
         font-size: 3rem;
         padding: 20px;
     }
+    
     .nav div.media_button {
         display: block;
     }
 }
 
-
 /* Animation */
-/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
 
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
 .navTrigger {
     cursor: pointer;
     width: 30px;
@@ -182,7 +184,6 @@ body {
     top: 0;
     bottom: 0;
 }
-
 .navTrigger i {
     background-color: #fff;
     border-radius: 2px;
@@ -191,14 +192,12 @@ body {
     width: 100%;
     height: 4px;
 }
-
 .navTrigger i:nth-child(1) {
     -webkit-animation: outT 0.8s backwards;
     animation: outT 0.8s backwards;
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
 }
-
 .navTrigger i:nth-child(2) {
     margin: 5px 0;
     -webkit-animation: outM 0.8s backwards;
@@ -206,187 +205,183 @@ body {
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
 }
-
 .navTrigger i:nth-child(3) {
     -webkit-animation: outBtm 0.8s backwards;
     animation: outBtm 0.8s backwards;
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
 }
-
 .navTrigger.active i:nth-child(1) {
     -webkit-animation: inT 0.8s forwards;
     animation: inT 0.8s forwards;
 }
-
 .navTrigger.active i:nth-child(2) {
     -webkit-animation: inM 0.8s forwards;
     animation: inM 0.8s forwards;
 }
-
 .navTrigger.active i:nth-child(3) {
     -webkit-animation: inBtm 0.8s forwards;
     animation: inBtm 0.8s forwards;
 }
-
 @-webkit-keyframes inM {
     50% {
         -webkit-transform: rotate(0deg);
     }
+    
     100% {
         -webkit-transform: rotate(45deg);
     }
 }
-
 @keyframes inM {
     50% {
         transform: rotate(0deg);
     }
+    
     100% {
         transform: rotate(45deg);
     }
 }
-
 @-webkit-keyframes outM {
     50% {
         -webkit-transform: rotate(0deg);
     }
+    
     100% {
         -webkit-transform: rotate(45deg);
     }
 }
-
 @keyframes outM {
     50% {
         transform: rotate(0deg);
     }
+    
     100% {
         transform: rotate(45deg);
     }
 }
-
 @-webkit-keyframes inT {
     0% {
         -webkit-transform: translateY(0px) rotate(0deg);
     }
+    
     50% {
         -webkit-transform: translateY(9px) rotate(0deg);
     }
+    
     100% {
         -webkit-transform: translateY(9px) rotate(135deg);
     }
 }
-
 @keyframes inT {
     0% {
         transform: translateY(0px) rotate(0deg);
     }
+    
     50% {
         transform: translateY(9px) rotate(0deg);
     }
+    
     100% {
         transform: translateY(9px) rotate(135deg);
     }
 }
-
 @-webkit-keyframes outT {
     0% {
         -webkit-transform: translateY(0px) rotate(0deg);
     }
+    
     50% {
         -webkit-transform: translateY(9px) rotate(0deg);
     }
+    
     100% {
         -webkit-transform: translateY(9px) rotate(135deg);
     }
 }
-
 @keyframes outT {
     0% {
         transform: translateY(0px) rotate(0deg);
     }
+    
     50% {
         transform: translateY(9px) rotate(0deg);
     }
+    
     100% {
         transform: translateY(9px) rotate(135deg);
     }
 }
-
 @-webkit-keyframes inBtm {
     0% {
         -webkit-transform: translateY(0px) rotate(0deg);
     }
+    
     50% {
         -webkit-transform: translateY(-9px) rotate(0deg);
     }
+    
     100% {
         -webkit-transform: translateY(-9px) rotate(135deg);
     }
 }
-
 @keyframes inBtm {
     0% {
         transform: translateY(0px) rotate(0deg);
     }
+    
     50% {
         transform: translateY(-9px) rotate(0deg);
     }
+    
     100% {
         transform: translateY(-9px) rotate(135deg);
     }
 }
-
 @-webkit-keyframes outBtm {
     0% {
         -webkit-transform: translateY(0px) rotate(0deg);
     }
+    
     50% {
         -webkit-transform: translateY(-9px) rotate(0deg);
     }
+    
     100% {
         -webkit-transform: translateY(-9px) rotate(135deg);
     }
 }
-
 @keyframes outBtm {
     0% {
         transform: translateY(0px) rotate(0deg);
     }
+    
     50% {
         transform: translateY(-9px) rotate(0deg);
     }
+    
     100% {
         transform: translateY(-9px) rotate(135deg);
     }
 }
-
 .affix {
     padding: 0;
     background-color: #111;
 }
-
-
-
-
-
-
 .myH2 {
-	text-align:center;
-	font-size: 4rem;
+    text-align: center;
+    font-size: 4rem;
 }
 .myP {
-	text-align: justify;
-	padding-left:15%;
-	padding-right:15%;
-	font-size: 20px;
+    text-align: justify;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 20px;
 }
-@media all and (max-width:700px){
-	.myP {
-		padding:2%;
-	}
+@media all and (max-width:700px) {
+    .myP {
+        padding: 2%;
+    }
 }
-
 .header {
     height: 100vh;
     background-image: linear-gradient(to bottom, rgba(71, 122, 184, 0.678), rgba(0, 0, 0, 0.924)), url(../img/zach-lezniewicz-Pfi_zhLmBr0-unsplash.jpg);
@@ -394,7 +389,6 @@ body {
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 }
-
 svg {
     top: 0;
     bottom: 0;
@@ -404,21 +398,39 @@ svg {
     height: 440px;
     left: 15%;
 }
-
 svg .cls-1 {
     fill: aliceblue;
     stroke-dashoffset: 1000;
     animation-name: slideInUp;
+    animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+    
+    animation-delay: 0s;
+    /* Safari 4.0 - 8.0 */
+    
+    animation-iteration-count: initial;
 }
-
 svg .cls-2 {
     fill: aliceblue;
     stroke-dashoffset: 1000;
     animation-name: slideInUp;
+    animation-duration: 5s;
+    /* Safari 4.0 - 8.0 */
+    
+    animation-delay: 0s;
+    /* Safari 4.0 - 8.0 */
+    
+    animation-iteration-count: initial;
 }
-
 svg .cls-3 {
     fill: aliceblue;
     stroke-dashoffset: 1000;
     animation-name: slideInUp;
+    animation-duration: 6s;
+    /* Safari 4.0 - 8.0 */
+    
+    animation-delay: 0s;
+    /* Safari 4.0 - 8.0 */
+    
+    animation-iteration-count: initial;
 }
